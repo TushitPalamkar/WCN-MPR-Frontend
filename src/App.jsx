@@ -6,6 +6,7 @@ import ContactUs from './components/ContactUs';
 import Blog from './components/Blog';
 import Login from './components/Login';
 import Register from './components/Register';
+import Books from './components/Books';
 function App() {
   return (
     <Router>
@@ -17,6 +18,7 @@ function App() {
         <Route path='/blog' element={<Blog/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/books' element={<Books/>}/>
       </Routes>
     </Router>
   );

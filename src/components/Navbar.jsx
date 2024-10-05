@@ -14,7 +14,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Link, useNavigate } from 'react-router-dom';
 
 // Include 'Contact Us' in the pages array
-const pages = ['Products', 'About', 'Blog', 'Contact Us'];
+const pages = ['Cart', 'About', 'Blog', 'Contact Us'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -39,6 +39,7 @@ function Navbar() {
   const handleLogout = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
+    alert("Logged out successfully");
     navigate('/');
   };
 
@@ -50,15 +51,15 @@ function Navbar() {
           <Typography
             variant="h6"
             noWrap
-            component={Link} // Change to Link for navigation
-            to="/" // Set the link path here
+            component={Link}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'white', // Text color set to white
+              color: 'white',
               textDecoration: 'none',
             }}
           >
