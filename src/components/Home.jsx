@@ -8,7 +8,7 @@ export default function Home() {
             </h2>
 
             <div className="flex flex-row justify-between items-start mx-auto max-w-6xl px-8">
-                {/* Text content */}
+              
                 <div className="flex flex-col max-w-lg">
                     <h1 className="text-5xl font-bold leading-tight text-gray-800">
                         For All Your Reading Needs
@@ -17,13 +17,13 @@ export default function Home() {
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quam velit saepe 
                         dolorem deserunt quo quidem ad optio. Find the perfect book that suits your interests.
                     </p>
-                    {/* Enhanced Button */}
+                  
                     <button className="text-white bg-gradient-to-r from-green-500 to-teal-500 hover:bg-gradient-to-l mt-8 px-4 py-2 w-32 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                         Read More
                     </button>
                 </div>
 
-                {/* Image with Shadow */}
+              
                 <img 
                     src="https://html.design/demo/bostorek/images/slider-img.png" 
                     alt="" 
@@ -82,6 +82,53 @@ export default function Home() {
                 
         </div>
         </div>
+        <div>
+    <h1 className="text-3xl text-center mt-5 font-bold">Customer Experiences</h1>
+    
+    <div className="flex flex-row gap-10 w-full max-w-5xl mx-auto bg-white rounded-lg justify-center items-center mt-7 p-8">
+
+        {/* First Card */}
+        <div className="flex flex-col bg-emerald-700 rounded-lg p-6 shadow-lg w-80">
+    <blockquote className="text-xl italic font-semibold text-white">
+        <svg className="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+            <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+        </svg>
+        <p>"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+    </blockquote>
+
+    <img 
+        src="https://html.design/demo/bostorek/images/c1.jpg" 
+        alt="Customer 2" 
+        className="rounded-2xl mt-4 mx-auto" 
+        height={150} 
+        width={150} 
+    />
+    <p className="text-white text-1xl font--semibold mt-2 text-center">John Doe, Student</p>
+</div>
+
+        {/* Second Card */}
+        <div className="flex flex-col bg-emerald-700 rounded-lg p-6 shadow-lg w-80">
+    <blockquote className="text-xl italic font-semibold text-white">
+        <svg className="w-8 h-8 text-gray-400 dark:text-gray-600 mb-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+            <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
+        </svg>
+        <p>"Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."</p>
+    </blockquote>
+
+    <img 
+        src="https://html.design/demo/bostorek/images/c3.jpg" 
+        alt="Customer 2" 
+        className="rounded-2xl mt-4 mx-auto" 
+        height={150} 
+        width={150} 
+    />
+    <p className="text-white text-1xl font--semibold mt-2 text-center">John Doe, Student</p>
+</div>
+
+
+    </div>
+</div>
+
         </>
     );
 }

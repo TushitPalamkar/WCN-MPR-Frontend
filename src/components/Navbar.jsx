@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 // Include 'Contact Us' in the pages array
 const pages = ['Products', 'About', 'Blog', 'Contact Us']; 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Register','Login', 'Logout'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -57,7 +57,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            BOOKIES
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -131,7 +131,7 @@ function Navbar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt=""  />
               </IconButton>
             </Tooltip>
             <Menu
