@@ -1,0 +1,87 @@
+export default function Home() {
+    return (
+        <>
+        <div className="bg-gradient-to-b from-gray-100 to-white mt-8 py-12">
+            {/* Section Title */}
+            <h2 className="text-3xl pt-3 text-emerald-700 font-semibold mb-6 text-center">
+                Our Bookstore
+            </h2>
+
+            <div className="flex flex-row justify-between items-start mx-auto max-w-6xl px-8">
+                {/* Text content */}
+                <div className="flex flex-col max-w-lg">
+                    <h1 className="text-5xl font-bold leading-tight text-gray-800">
+                        For All Your Reading Needs
+                    </h1>
+                    <p className="mt-4 text-gray-600 text-lg leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quam velit saepe 
+                        dolorem deserunt quo quidem ad optio. Find the perfect book that suits your interests.
+                    </p>
+                    {/* Enhanced Button */}
+                    <button className="text-white bg-gradient-to-r from-green-500 to-teal-500 hover:bg-gradient-to-l mt-8 px-4 py-2 w-32 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                        Read More
+                    </button>
+                </div>
+
+                {/* Image with Shadow */}
+                <img 
+                    src="https://html.design/demo/bostorek/images/slider-img.png" 
+                    alt="" 
+                    width={500} 
+                    height={500} 
+                    className="ml-12 rounded-lg shadow-xl hover:scale-105 transform transition-transform duration-300"
+                />
+            </div>
+        </div>
+        <div className="mt-5 bg-gradient-to-b from-gray-100 to-white py-12">
+        <h1 className="font-bold text-3xl text-center ">Book Categories</h1>
+        <p className="font-normal text-1xl text-center mt-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
+        <div className="flex flex-wrap justify-center gap-20 mt-5">
+        <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-5 w-80 hover:scale-105 transform transition-transform duration-300">
+                    <img src="https://html.design/demo/bostorek/images/cat1.png" alt="" width={100} height={100} />
+                    <h1 className="font-bold text-xl mt-4 text-gray-800">TextBooks</h1>
+                    <p className="text-gray-600 text-center mt-2">
+                        A reader will be distracted by the readable content of a page when looking at its layout.
+                    </p>
+                </div>
+                <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6 w-80 hover:scale-105 transform transition-transform duration-300">
+                    <img src="https://html.design/demo/bostorek/images/cat2.png" alt="" width={100} height={100} />
+                    <h1 className="font-bold text-xl mt-4 text-gray-800">Science</h1>
+                    <p className="text-gray-600 text-center mt-2">
+                        A reader will be distracted by the readable content of a page when looking at its layout.
+                    </p>
+                </div>
+                <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6 w-80 hover:scale-105 transform transition-transform duration-300">
+                    <img src="https://html.design/demo/bostorek/images/cat3.png" alt="" width={100} height={100} />
+                    <h1 className="font-bold text-xl mt-4 text-gray-800">History</h1>
+                    <p className="text-gray-600 text-center mt-2">
+                        A reader will be distracted by the readable content of a page when looking at its layout.
+                    </p>
+                </div>  
+                <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6 w-80 hover:scale-105 transform transition-transform duration-300">
+                    <img src="https://html.design/demo/bostorek/images/cat4.png" alt="" width={100} height={100} />
+                    <h1 className="font-bold text-xl mt-4 text-gray-800">Bibliography</h1>
+                    <p className="text-gray-600 text-center mt-2">
+                        A reader will be distracted by the readable content of a page when looking at its layout.
+                    </p>
+                </div>     
+                <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6 w-80 hover:scale-105 transform transition-transform duration-300">
+                    <img src="https://html.design/demo/bostorek/images/cat5.png" alt="" width={100} height={100} />
+                    <h1 className="font-bold text-xl mt-4 text-gray-800">Adventure</h1>
+                    <p className="text-gray-600 text-center mt-2">
+                        A reader will be distracted by the readable content of a page when looking at its layout.
+                    </p>
+                </div>     
+                <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-6 w-80 hover:scale-105 transform transition-transform duration-300">
+                    <img src="https://html.design/demo/bostorek/images/cat6.png" alt="" width={100} height={100} />
+                    <h1 className="font-bold text-xl mt-4 text-gray-800">Fantasy</h1>
+                    <p className="text-gray-600 text-center mt-2">
+                        A reader will be distracted by the readable content of a page when looking at its layout.
+                    </p>
+                </div>     
+                
+        </div>
+        </div>
+        </>
+    );
+}
