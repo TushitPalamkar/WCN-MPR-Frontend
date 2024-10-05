@@ -3,7 +3,7 @@ import axios from 'axios';
 export default function Home() {
     const navigate = useNavigate();
     const handleClick = (genre) => {
-        navigate(`/books/${genre.toLowerCase()}`)
+        navigate(`/books?genre=${genre.toLowerCase()}`)
     }
     return (
         <>
@@ -24,7 +24,7 @@ export default function Home() {
                             dolorem deserunt quo quidem ad optio. Find the perfect book that suits your interests.
                         </p>
 
-                        <button className="text-white bg-gradient-to-r from-green-500 to-teal-500 hover:bg-gradient-to-l mt-8 px-4 py-2 w-32 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                        <button onClick={()=>navigate('/about')} className="text-white bg-gradient-to-r from-green-500 to-teal-500 hover:bg-gradient-to-l mt-8 px-4 py-2 w-32 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                             Read More
                         </button>
                     </div>
@@ -43,7 +43,7 @@ export default function Home() {
                 <h1 className="font-bold text-3xl text-center ">Book Categories</h1>
                 <p className="font-normal text-1xl text-center mt-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
                 <div className="flex flex-wrap justify-center gap-20 mt-5">
-                    <div onClick={() => handleClick('Textbooks')} className="flex flex-col items-center bg-white shadow-lg rounded-lg p-5 w-80 hover:scale-105 transform transition-transform duration-300 cursor-pointer">
+                    <div onClick={() => handleClick('Textbooks')} className="flex flex-col items-center bg-white shadow-lg rounded-lg p-5 w-80 hover:scale-105 transform transition-transform duration-300 cursor-pointer hover:shadow-xl ">
                         <img src="https://html.design/demo/bostorek/images/cat1.png" alt="" width={100} height={100} />
                         <h1 className="font-bold text-xl mt-4 text-gray-800">Textbooks</h1>
                         <p className="text-gray-600 text-center mt-2">

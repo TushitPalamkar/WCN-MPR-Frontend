@@ -16,7 +16,7 @@ function Login() {
         password
       });
       if (response.data.token) {
-        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('userID', response.data.userID);
         navigate('/');
         window.location.reload(); // To update the Navbar state
       } else {

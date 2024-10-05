@@ -7,6 +7,8 @@ import Blog from './components/Blog';
 import Login from './components/Login';
 import Register from './components/Register';
 import Books from './components/Books';
+import Cart from './components/Cart';
+import Payment from './components/Payment';
 function App() {
   return (
     <Router>
@@ -19,6 +21,8 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/books' element={<Books/>}/>
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/payment' element={<Payment/>}/>
       </Routes>
     </Router>
   );

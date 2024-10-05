@@ -22,8 +22,8 @@ function Navbar() {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
+    const userID = localStorage.getItem('userID');
+    if (userID) {
       setIsLoggedIn(true);
     }
   }, []);
@@ -37,7 +37,7 @@ function Navbar() {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem('userID');
     setIsLoggedIn(false);
     alert("Logged out successfully");
     navigate('/');
