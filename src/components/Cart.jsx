@@ -74,8 +74,12 @@ function Cart() {
     };
 
     const handleProceedToPayment = () => {
-        // You can pass the total amount or any other necessary data to the payment page
-        navigate('/payment', { state: { totalAmount: calculateTotal() } });
+        navigate('/payment', { 
+            state: { 
+                totalAmount: calculateTotal(),
+                cartItems: savedBooks
+            } 
+        });
     };
 
     if (loading) return <div>Loading...</div>;
@@ -117,7 +121,7 @@ function Cart() {
                         </div>
                         <button
                             onClick={handleProceedToPayment}
-                            className="w-full px-4 py-2 bg-emerald-500 text-white text-lg font-medium rounded-md shadow-sm hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-300 transition duration-150 ease-in-out"
+                            className="w-full px-4 py-2 bg-gradient-to-r from-green-500 to-teal-500 text-white text-lg font-medium rounded-md shadow-sm hover:bg-emerald-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-300 transition duration-150 ease-in-out"
                         >
                             Proceed to Payment
                         </button>

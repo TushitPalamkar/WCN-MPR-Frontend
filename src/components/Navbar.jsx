@@ -142,7 +142,7 @@ function Navbar() {
             {isLoggedIn ? (
               <Button
                 variant="outlined"
-                sx={{ color: 'white', borderColor: 'white' }}
+                sx={{ color: '#006400', backgroundColor: 'white' ,borderColor: 'white' }}
                 onClick={handleLogout}
               >
                 Logout

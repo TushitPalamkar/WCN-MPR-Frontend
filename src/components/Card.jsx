@@ -20,13 +20,10 @@ function Card({ book, onClose, isLoggedIn }) {
     }, [onClose]);
 
     const handleSaveBook = async () => {
-        console.log('isLoggedIn:', isLoggedIn);
         if (isLoggedIn) {
             const userID = localStorage.getItem('userID');
-            console.log('UserID from localStorage:', userID);
             try {
-                console.log('Sending request with:', { bookId: book._id, quantity: 1, userID: userID });
-                const response = await axios.post('http://localhost:5000/cart/add', 
+                const response = await axios.post('http://localhost:5000/cart/add',
                     { bookId: book._id, quantity: 1, userID: userID }
                 );
                 console.log('Book saved:', response.data);
@@ -42,26 +39,32 @@ function Card({ book, onClose, isLoggedIn }) {
     };
 
     return (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" id="my-modal">
-            <div ref={cardRef} className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
-                <div className="mt-3 text-center">
-                    <img src={book.image} alt={book.title} className="w-full h-full object-cover rounded-md mb-4" />
-                    <h3 className="text-lg leading-6 font-medium text-gray-900">{book.title}</h3>
-                    <p className="text-sm text-gray-500 mt-2">{book.author}</p>
-                    <p className="text-lg font-bold text-emerald-600 mt-2">₹{book.price.toFixed(2)}</p>
-                    <div className="mt-4">
-                        <button
-                            onClick={handleSaveBook}
-                            className="px-4 py-2 bg-emerald-500 text-white text-base font-medium rounded-md shadow-sm hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-300"
-                        >
-                            Save Book
-                        </button>
-                        <button
-                            onClick={onClose}
-                            className="mt-3 px-4 py-2 bg-white text-emerald-500 text-base font-medium rounded-md border border-emerald-500 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-emerald-300"
-                        >
-                            Close
-                        </button>
+        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center" id="my-modal">
+            <div ref={cardRef} className="relative p-5 border w-3/4 max-w-2xl shadow-lg rounded-md bg-white">
+                <div className="flex">
+                    <div className="w-1/3 pr-4">
+                        <img src={book.image} alt={book.title} className="w-full h-auto object-cover rounded-md" />
+                    </div>
+                    <div className="w-2/3 pl-4 flex flex-col justify-between">
+                        <div>
+                            <h3 className="text-2xl leading-6 font-medium text-gray-900 mb-2">{book.title}</h3>
+                            <p className="text-lg text-gray-500 mb-2">by {book.author}</p>
+                            <p className="text-xl font-bold text-emerald-600 mb-4">₹{book.price.toFixed(2)}</p>
+                        </div>
+                        <div className="flex justify-end space-x-4">
+                            <button
+                                onClick={handleSaveBook}
+                                className="px-6 py-2 bg-emerald-500 text-white text-base font-medium rounded-md shadow-sm hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-300"
+                            >
+                                Add to Cart
+                            </button>
+                            <button
+                                onClick={onClose}
+                                className="px-6 py-2 bg-white text-emerald-500 text-base font-medium rounded-md border border-emerald-500 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-emerald-300"
+                            >
+                                Close
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

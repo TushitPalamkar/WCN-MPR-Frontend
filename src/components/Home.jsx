@@ -79,10 +79,10 @@ export default function Home() {
 
     return (
         <>
-            <div className="bg-gradient-to-b from-gray-100 to-white mt-8 py-12">
+            <div className="bg-gradient-to-b from-gray-100 to-white py-12">
                 {/* Section Title */}
-                <h2 ref={titleRef} className="text-3xl pt-3 text-emerald-700 font-semibold mb-6 text-center">
-                    Our Bookstore
+                <h2 ref={titleRef} className="text-5xl text-emerald-700 font-semibold mb-8 text-center">
+                    BOOKIES
                 </h2>
 
                 <div className="flex flex-row justify-between items-start mx-auto max-w-6xl px-8">
@@ -91,8 +91,7 @@ export default function Home() {
                             For All Your Reading Needs
                         </h1>
                         <p className="mt-4 text-gray-600 text-lg leading-relaxed">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste quam velit saepe
-                            dolorem deserunt quo quidem ad optio. Find the perfect book that suits your interests.
+                            Discover a world of knowledge and imagination at Bookies. From gripping novels to insightful non-fiction, we offer a vast collection to satisfy every reader's taste. Whether you're a casual reader or a dedicated bookworm, find your next great read with us.
                         </p>
 
                         <button onClick={()=>navigate('/about')} className="text-white bg-gradient-to-r from-green-500 to-teal-500 hover:bg-gradient-to-l mt-8 px-4 py-2 w-32 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
@@ -113,17 +112,24 @@ export default function Home() {
                 <h1 className="font-bold text-3xl text-center ">Book Categories</h1>
                 <p className="font-normal text-1xl text-center mt-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
                 <div className="flex flex-wrap justify-center gap-20 mt-5">
-                    {['Textbooks', 'Science', 'History', 'Bibliography', 'Adventure', 'Fantasy'].map((category, index) => (
+                    {[ 
+                        { name: 'Textbooks', description: 'Comprehensive academic resources for students across all disciplines.' },
+                        { name: 'Science', description: 'Explore the wonders of the universe, from quantum physics to astronomy.' },
+                        { name: 'History', description: 'Journey through time with captivating accounts of world events and civilizations.' },
+                        { name: 'Biography', description: 'Inspiring life stories of influential figures who shaped our world.' },
+                        { name: 'Adventure', description: 'Embark on thrilling journeys and experience heart-pounding excitement.' },
+                        { name: 'Fantasy', description: 'Immerse yourself in magical realms and extraordinary adventures beyond imagination.' }
+                    ].map((category, index) => (
                         <div 
                             key={index}
                             ref={el => categoryCardsRef.current[index] = el}
-                            onClick={() => handleClick(category)} 
-                            className="flex flex-col items-center bg-white shadow-lg rounded-lg p-5 w-80 hover:scale-105 transform transition-transform duration-300 cursor-pointer hover:shadow-xl"
+                            onClick={() => handleClick(category.name)} 
+                            className="group flex flex-col items-center bg-white shadow-lg rounded-lg p-5 w-80 hover:scale-105 transform transition-transform duration-300 cursor-pointer hover:shadow-xl hover:bg-gradient-to-r from-green-500 to-teal-500"
                         >
                             <img src={`https://html.design/demo/bostorek/images/cat${index + 1}.png`} alt="" width={100} height={100} />
-                            <h1 className="font-bold text-xl mt-4 text-gray-800">{category}</h1>
-                            <p className="text-gray-600 text-center mt-2">
-                                A reader will be distracted by the readable content of a page when looking at its layout.
+                            <h1 className="font-bold text-xl mt-4 text-gray-800 group-hover:text-white transition-colors duration-300">{category.name}</h1>
+                            <p className="text-gray-600 group-hover:text-white text-center mt-2 transition-colors duration-300">
+                                {category.description}
                             </p>
                         </div>
                     ))}
